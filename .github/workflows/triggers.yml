@@ -1,7 +1,8 @@
 name: Triggers Example
 on:
-    schedule:
-        - cron: "*/1 * * * *"
+    workflow_dispatch: 
+    # schedule:
+    #     - cron: "*/1 * * * *"
     
 jobs:
     print-message:
