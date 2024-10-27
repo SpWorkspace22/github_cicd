@@ -6,6 +6,9 @@ jobs:
     steps: 
       - name: Welcome Message
         run: echo "My First Github Actios Jon"
+      
+      - name: Checkout Repo
+        uses: actions/checkout@v4.2.2
 
       - name: List Of Files
         run: ls 
