@@ -12,6 +12,4 @@ jobs:
               echo "My First Github Actios Jon"
               ls -ltra 
               cat README.md 
-      
-      - name: generate ASCII Content
-        run: cowsay -f "Run For Cover" >> dragon.txt
+    
