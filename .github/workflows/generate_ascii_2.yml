@@ -1,0 +1,34 @@
+name: Generate Ascii Artwork With CI
+on:
+    push
+
+jobs:
+    build_job_1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Install cowsay progrramme
+              run: sudo apt-get install cowsay -y
+              
+            - name: Execute cowsay prograame
+              run: cowsay -f dragon "Run For Cover, I am Dragon" >> dragon.txt
+            
+            - name: Sleep for 30sec
+              run: sleep 30
+
+    test_job_2:
+        runs-on: ubuntu-latest
+        steps:
+            - name: sleep for 10 second
+              run: sleep 10
+
+            - name: Test file dragon.txt exist
+              run: grep -i "dragon" dragon.txt
+
+    deployment_job_3:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Read File
+              run: cat dragon.txt
+
+            - name: Deploy
+              run: echo "Deploying...."
