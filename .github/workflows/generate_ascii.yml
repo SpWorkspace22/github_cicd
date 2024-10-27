@@ -10,9 +10,11 @@ jobs:
 
             - name: List Files
               run: ls -ltra
-              
+
             - name: Run Shell Script
-              run: ./ascii-script.sh
+              run: |
+                chmod +x ascii-script.sh
+                ./ascii-script.sh
             # - name: Install cowsay programme
             #   run:  sudo apt-get install cowsay -y
 
